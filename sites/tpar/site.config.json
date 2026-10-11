@@ -1,0 +1,209 @@
+{
+  "schema": "nuxtjp://localized-site/site-config/v1",
+  "siteId": "tpar-site",
+  "serviceId": "tpar",
+  "origin": "https://tpar.net",
+  "audienceScope": "global",
+  "defaultLocale": "en",
+  "fallbackLocale": "ja",
+  "prefixDefaultLocale": false,
+  "locales": [
+    "ja",
+    "en"
+  ],
+  "externalActions": false,
+  "content": {
+    "ja": {
+      "brand": "TPAR",
+      "tagline": "確定前の選択肢を証拠、役割、影響から検討する意思決定支援",
+      "summary": "TPARは、まだ確定していない選択肢を比較し、前提、反対意見、影響、決定理由を残す独立した意思決定支援境界です。ワークフローの実行や権限行使は行わず、確定した結果だけを明示的な引き継ぎ先へ渡します。",
+      "features": [
+        {
+          "id": "deliberation-case",
+          "title": "検討ケース",
+          "summary": "問い、選択肢、制約、参加する役割、期限を一つの検討単位として整理します。"
+        },
+        {
+          "id": "evidence-trace",
+          "title": "証拠と論点",
+          "summary": "出典、仮定、未確認事項、賛否、影響範囲を決定結果から逆に追える形で記録します。"
+        },
+        {
+          "id": "decision-handoff",
+          "title": "決定の引き継ぎ",
+          "summary": "承認された結論を版付きの決定記録にします。Constilloは計画・検証を担当し、実行権限を持つ別のExecutorを利用側が接続します。"
+        }
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "TPARの概要",
+          "summary": "検討、決定、実行の境界を分ける理由を説明します。",
+          "sections": [
+            {
+              "id": "deliberation-boundary",
+              "title": "確定前を扱う",
+              "body": [
+                "TPARは複数の選択肢が残る段階を扱います。HAT、MCP、外部資料から得た情報を同じケースへ整理できますが、情報源と確度を失わない形で保持します。"
+              ]
+            },
+            {
+              "id": "execution-boundary",
+              "title": "実行から分離する",
+              "body": [
+                "TPARは決定を支援し、実行コマンドや外部サービス変更は行いません。確定後は責任者、決定版、許可された出力だけを別のワークフローへ引き継ぎます。",
+                "TPARは決定、Constilloは非実行の計画・検証、別のExecutorは承認範囲内の実行を担当します。Constillo自身は実行権限を持ちません。"
+              ]
+            }
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "検討を始める",
+          "summary": "意思決定ケースを小さく、追跡可能に作る手順です。",
+          "sections": [
+            {
+              "id": "frame-question",
+              "title": "問いと権限を定める",
+              "body": [
+                "一つの問い、決定できる人、期限、対象外、必要な証拠を先に定めます。相談、学習、障害対応、会議シミュレーションを別の目的として区別します。"
+              ]
+            },
+            {
+              "id": "review-outcome",
+              "title": "結論をレビューする",
+              "body": [
+                "採用案だけでなく棄却理由、残余リスク、未確認事項を確認します。決定記録を実行へ渡す前に、責任者が版と影響範囲を承認します。"
+              ]
+            }
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "意思決定データの安全性",
+          "summary": "検討材料を最小化し、実行権限から隔離する原則です。",
+          "sections": [
+            {
+              "id": "bounded-evidence",
+              "title": "必要な証拠だけを扱う",
+              "body": [
+                "資格情報、顧客データ、健康記録などの原文を公開ケースへコピーしません。参照が必要な場合は分類と取得元を保持したまま、許可された要約を使用します。"
+              ]
+            },
+            {
+              "id": "no-execution",
+              "title": "実行権限を持たない",
+              "body": [
+                "このサイトと公開設定はワークフロー開始、外部API呼び出し、通知送信、契約、決済を行いません。Hatterは任意の操作面であり、TPARの利用条件ではありません。"
+              ]
+            }
+          ]
+        }
+      },
+      "privacy": {
+        "label": "プライバシー",
+        "summary": "公開サイトは検討ケース、会話、個人プロファイル、顧客資料を収集しません。ローカル利用ではケースごとに保存場所、保持期間、共有範囲を決めてください。"
+      },
+      "contact": {
+        "label": "TPARに関する連絡",
+        "summary": "仕様や安全境界への意見は、tpar.netで確認済みとして案内される窓口へ公開可能な再現情報だけを送ってください。実際の意思決定ケースや秘密資料を送らないでください。"
+      }
+    },
+    "en": {
+      "brand": "TPAR",
+      "tagline": "Decision support for evaluating unsettled options through evidence, roles, and impact",
+      "summary": "TPAR is an independent decision-support boundary for comparing unresolved options and preserving assumptions, objections, impacts, and rationale. It neither runs workflows nor exercises authority; only an explicitly confirmed outcome is handed to an execution boundary.",
+      "features": [
+        {
+          "id": "deliberation-case",
+          "title": "Deliberation case",
+          "summary": "Structures a question, options, constraints, participating roles, and deadline as one reviewable unit."
+        },
+        {
+          "id": "evidence-trace",
+          "title": "Evidence and issues",
+          "summary": "Records sources, assumptions, unknowns, arguments, and impact so they remain traceable from the outcome."
+        },
+        {
+          "id": "decision-handoff",
+          "title": "Decision handoff",
+          "summary": "Produces a versioned record of the approved decision. Constillo handles planning and validation; the consumer connects a separate executor that owns execution authority."
+        }
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "TPAR overview",
+          "summary": "Explains why deliberation, decision, and execution are separate boundaries.",
+          "sections": [
+            {
+              "id": "deliberation-boundary",
+              "title": "Work before commitment",
+              "body": [
+                "TPAR addresses the stage where multiple options remain. Information from HATs, MCP services, or external sources can be organized in one case while retaining provenance and confidence."
+              ]
+            },
+            {
+              "id": "execution-boundary",
+              "title": "Separate execution",
+              "body": [
+                "TPAR supports a decision but does not run commands or change external services. After confirmation, only the owner, decision version, and permitted output are handed to a separate workflow.",
+                "TPAR owns the decision, Constillo owns non-executable planning and validation, and a separate executor performs approved effects. Constillo itself holds no execution authority."
+              ]
+            }
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "Start a deliberation",
+          "summary": "A sequence for creating a small and traceable decision case.",
+          "sections": [
+            {
+              "id": "frame-question",
+              "title": "Frame the question and authority",
+              "body": [
+                "Define one question, the accountable decision maker, deadline, exclusions, and required evidence. Distinguish consultation, learning, incident response, and meeting simulation as different purposes."
+              ]
+            },
+            {
+              "id": "review-outcome",
+              "title": "Review the outcome",
+              "body": [
+                "Review rejected alternatives, residual risk, and unknowns as well as the selected option. Before execution, the accountable owner approves the decision version and impact boundary."
+              ]
+            }
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "Decision-data security",
+          "summary": "Principles for minimizing evidence and isolating it from execution authority.",
+          "sections": [
+            {
+              "id": "bounded-evidence",
+              "title": "Use only necessary evidence",
+              "body": [
+                "Do not copy credentials, customer data, health records, or similar source material into a public case. Where a reference is necessary, retain classification and provenance and use only an approved summary."
+              ]
+            },
+            {
+              "id": "no-execution",
+              "title": "No execution authority",
+              "body": [
+                "This site and its public configuration cannot start workflows, call external APIs, send notifications, contract, or bill. Hatter is an optional interface and not a requirement for using TPAR."
+              ]
+            }
+          ]
+        }
+      },
+      "privacy": {
+        "label": "Privacy",
+        "summary": "The public site does not collect deliberation cases, conversations, personal profiles, or customer records. For local use, define storage, retention, and sharing separately for each case."
+      },
+      "contact": {
+        "label": "TPAR contact",
+        "summary": "Send feedback about the specification or safety boundary through a verified channel identified on tpar.net, including only public reproduction details. Do not send real decision cases or confidential records."
+      }
+    }
+  }
+}
